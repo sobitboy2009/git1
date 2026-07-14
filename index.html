@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мой Тестовый Сайт</title>
+    <style>
+        /* Плавный фон с градиентом */
+body { 
+    font-family: 'Segoe UI', sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    padding-top: 50px; 
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    min-height: 100vh;
+}
+
+.container { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    width: 320px;
+    transition: transform 0.3s ease; /* Плавность для эффектов */
+}
+
+/* Эффект при наведении на контейнер */
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 { color: #333; font-size: 24px; text-align: center; }
+
+input { 
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 2px solid #ddd; 
+    border-radius: 5px;
+    box-sizing: border-box; /* Чтобы padding не ломал ширину */
+}
+
+button { 
+    width: 100%; 
+    padding: 10px; 
+    background-color: #5c67f2; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s;
+}
+
+button:hover { background-color: #4a54e1; }
+
+ul { list-style: none; padding: 0; }
+
+li { 
+    padding: 10px; 
+    background: #f9f9f9; 
+    margin-bottom: 5px; 
+    border-radius: 4px; 
+    animation: fadeIn 0.5s; /* Анимация появления */
+}
+
+/* Анимация появления списка */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Мои задачи</h1>
+        <input type="text" id="taskInput" placeholder="Что нужно сделать?">
+        <button onclick="addTask()">Добавить</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
