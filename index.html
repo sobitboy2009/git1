@@ -4,68 +4,68 @@
     <meta charset="UTF-8">
     <title>Мой Тестовый Сайт</title>
     <style>
-        /* Плавный фон с градиентом */
-body { 
-    font-family: 'Segoe UI', sans-serif; 
-    display: flex; 
-    justify-content: center; 
-    padding-top: 50px; 
-    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
-    min-height: 100vh;
+   body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Яркий, сочный фон */
+    background: radial-gradient(circle at top right, #ff9a9e, #fad0c4 50%, #a18cd1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container { 
-    background: white; 
-    padding: 30px; 
-    border-radius: 15px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+.container {
+    /* Главная магия Glassmorphism */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     width: 320px;
-    transition: transform 0.3s ease; /* Плавность для эффектов */
 }
 
-/* Эффект при наведении на контейнер */
-.container:hover {
-    transform: scale(1.02);
+h1 { color: white; text-align: center; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    outline: none;
+    box-sizing: border-box;
 }
 
-h1 { color: #333; font-size: 24px; text-align: center; }
-
-input { 
-    width: 100%; 
-    padding: 10px; 
-    margin-bottom: 10px; 
-    border: 2px solid #ddd; 
-    border-radius: 5px;
-    box-sizing: border-box; /* Чтобы padding не ломал ширину */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #6a11cb;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-button { 
-    width: 100%; 
-    padding: 10px; 
-    background-color: #5c67f2; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background 0.3s;
+button:hover {
+    background: #6a11cb;
+    color: white;
 }
 
-button:hover { background-color: #4a54e1; }
-
-ul { list-style: none; padding: 0; }
-
-li { 
-    padding: 10px; 
-    background: #f9f9f9; 
-    margin-bottom: 5px; 
-    border-radius: 4px; 
-    animation: fadeIn 0.5s; /* Анимация появления */
-}
-
-/* Анимация появления списка */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+li {
+    background: rgba(255, 255, 255, 0.3);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    list-style: none;
+    border-left: 5px solid #ff9a9e;
 }
     </style>
 </head>
